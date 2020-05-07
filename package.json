@@ -2,10 +2,13 @@
   "name": "first-contentful-paint",
   "version": "0.0.1",
   "description": "A JavaScript library for measuring the First Contentful Paint metric",
-  "main": "src/first-contentful-paint.js",
+  "source": "src/first-contentful-paint.js",
+  "main": "dist/first-contentful-paint.js",
+  "module": "dist/first-contentful-paint.module.js",
+  "unpkg": "dist/first-contentful-paint.umd.js",
+  "umd:main": "dist/first-contentful-paint.umd.js",
   "scripts": {
-    "test": "",
-    "build": ""
+    "build": "microbundle --name getFCP"
   },
   "repository": {
     "type": "git",
@@ -14,13 +17,21 @@
   "keywords": [
     "RUM",
     "metrics",
+    "FCP",
     "performance",
     "speed"
+  ],
+  "files": [
+    "src",
+    "dist"
   ],
   "author": "Vignesh Shanmugam <vignesh.shanmugam22@gmail.com> (https://vigneshh.in)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vigneshshanmugam/first-contentful-paint/issues"
   },
-  "homepage": "https://github.com/vigneshshanmugam/first-contentful-paint#readme"
+  "homepage": "https://github.com/vigneshshanmugam/first-contentful-paint#readme",
+  "devDependencies": {
+    "microbundle": "^0.12.0-next.9"
+  }
 }
