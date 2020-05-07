@@ -22,6 +22,9 @@ function isPainted(node) {
   return node.offsetHeight > 0;
 }
 
+/**
+ * Measure FCP only after the image is fetched
+ */
 function isImageCompleted() {
   if (currentNode.complete && isPainted(currentNode)) {
     firstContentfulPaint = performance.now();
@@ -39,16 +42,20 @@ function checkFCP() {
       if (!node) {
         return false;
       }
-
+      /**
+       * Text Node representing non-empty text, and the node must
+       * be visible and opacity must not be 0
+       */
       const isNonEmptyTextNode =
         node.nodeType === Node.TEXT_NODE && /[^s]/.test(node.nodeValue.trim());
-
       if (isNonEmptyTextNode && isPainted(node.parentNode)) {
         return isNonEmptyTextNode;
       }
 
+      /**
+       * Image node with a proper contentful image
+       */
       const isContentfulImage = node.tagName === "IMG" && node.src != "";
-
       if (isContentfulImage) {
         isImage = true;
         return isContentfulImage;
