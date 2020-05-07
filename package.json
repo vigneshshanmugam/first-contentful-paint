@@ -1,0 +1,26 @@
+{
+  "name": "first-contentful-paint",
+  "version": "0.0.1",
+  "description": "A JavaScript library for measuring the First Contentful Paint metric",
+  "main": "src/first-contentful-paint.js",
+  "scripts": {
+    "test": "",
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigneshshanmugam/first-contentful-paint.git"
+  },
+  "keywords": [
+    "RUM",
+    "metrics",
+    "performance",
+    "speed"
+  ],
+  "author": "Vignesh Shanmugam <vignesh.shanmugam22@gmail.com> (https://vigneshh.in)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vigneshshanmugam/first-contentful-paint/issues"
+  },
+  "homepage": "https://github.com/vigneshshanmugam/first-contentful-paint#readme"
+}
