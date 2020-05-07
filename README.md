@@ -4,7 +4,7 @@ A JavaScript library for measuring First Contentful Paint (FCP) in the browser
 that does not support the [Paint Timing
 API](https://w3c.github.io/paint-timing/).
 
-- 401 Bytes Polyfill that works across all browsers.
+- **401 Bytes** FCP polyfill that works across all browsers.
 
 ### Installation
 
@@ -18,7 +18,7 @@ The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https
 <script src="https://unpkg.com/first-contentful-paint/dist/first-contentful-paint.umd.js"></script>
 ```
 
-You can accesss the library on `window.getFCP`.
+You can access the library on `window.getFCP`.
 
 ### Usage
 
@@ -31,7 +31,7 @@ getFCP((fcpValue, node) => {
 });
 ```
 
-Easiest way to use this library only on unsupported browsers would be like this
+The easiest way to use this library only on unsupported browsers would be like this
 
 ```js
 if (PerformanceObserver.supportedEntryTypes.indexOf("paint") >= 0) {
@@ -55,7 +55,7 @@ DOMHighResTimeStamp and DOM node responsible for the paint.
 
 - The measured value is an approximation to the actual First Contentful Paint value
   and may have a variance of +/- 10ms.
-- Handles only rendering of Image/Text nodes. Does not handle replaced elements
-  like Canvas, Video, Audio, Embed, Iframe etc which might trigger FCP.
-- Does not report correct metrics if tab is backgrounded as the measurement
+- Handles only rendering of Image/Text nodes. It does not handle replaced elements
+  like Canvas, Video, Audio, Embed, Iframe, etc which might trigger FCP.
+- Does not report correct metrics if the tab is backgrounded as the measurement
   relies heavily on requestAnimationFrame.
