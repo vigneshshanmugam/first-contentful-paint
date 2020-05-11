@@ -55,7 +55,8 @@ function checkFCP() {
       /**
        * Image node with a proper contentful image
        */
-      const isContentfulImage = node.tagName === "IMG" && node.src != "";
+      const isContentfulImage =
+        node instanceof HTMLImageElement && node.src !== "";
       if (isContentfulImage) {
         isImage = true;
         return isContentfulImage;
