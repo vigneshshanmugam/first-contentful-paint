@@ -1,6 +1,6 @@
 # first-contentful-paint
 
-A JavaScript library for measuring First Contentful Paint (FCP) on browsers
+Polyfill for measuring First Contentful Paint (FCP) on browsers
 that does not support the [Paint Timing
 API](https://w3c.github.io/paint-timing/).
 
